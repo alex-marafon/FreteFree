@@ -1,0 +1,53 @@
+﻿using FreteFree.Models.Enum;
+using FreteFree.Models.Processo;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace FreteFree.Models.Motorista
+{
+    public class OrdemCarregamento
+    {
+        public OrdemCarregamento()
+        {
+            DateTime DataOrdemCarregamento = DateTime.Now;
+            Empresas = new HashSet<Empresa>();
+            Motoristas = new HashSet<Motorista>();
+        }
+
+        [Key]
+        [Display(Name = "ID")]
+        public int OrdemCarregamentoId { get; set; }
+
+        [Required(ErrorMessage ="Infome o Nome da Empresa")]
+        [Display(Name ="Empresa")]
+        public int EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
+
+        [Required(ErrorMessage = "Infome o Nome do Motorista")]
+        [Display(Name = "Motorista")]
+        public int MotoristaId { get; set; }
+        public Motorista Motorista { get; set; }
+        
+
+        [Required(ErrorMessage = "Infome o Valor")]
+        [Display(Name = "Valor")]
+        public decimal Valor { get; set; }
+
+        [Required(ErrorMessage = "Infome o Tipo de Medida")]
+        [Display(Name = " Tipo de Medida")]
+        public Medida Medida { get; set; }
+
+        [Required(ErrorMessage = "Infome a Data")]
+        [Display(Name = " Data")]
+        public DateTime DataOrdemCarregamento { get; set; }
+
+
+
+
+        public virtual ICollection<Empresa> Empresas { get; set; }
+        public virtual ICollection<Motorista> Motoristas { get; set; }
+    }
+}
