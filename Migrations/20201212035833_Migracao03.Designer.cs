@@ -4,14 +4,16 @@ using FreteFree.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FreteFree.Migrations
 {
     [DbContext(typeof(FreteFreeContext))]
-    partial class FreteFreeContextModelSnapshot : ModelSnapshot
+    [Migration("20201212035833_Migracao03")]
+    partial class Migracao03
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

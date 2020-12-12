@@ -29,6 +29,8 @@ namespace FreteFree.Models.Processo
         [Display(Name = "Cidade Empresa")]
         public string CidadeEmpresa { get; set; }
 
-     //   public ICollection<Empresa> empresa { get; set; }
+        public bool Ativo { get; set; }
+
+        //   public ICollection<Empresa> empresa { get; set; }
     }
 }

@@ -12,7 +12,8 @@ namespace FreteFree.Models.Motorista
     {
         public OrdemCarregamento()
         {
-            DateTime DataOrdemCarregamento = DateTime.Now;
+            DataOrdemCarregamento = DateTime.Now;
+            //força o carregamento dos relacionamentos "Empresa" "Motorista"
             Empresas = new HashSet<Empresa>();
             Motoristas = new HashSet<Motorista>();
         }
@@ -30,7 +31,6 @@ namespace FreteFree.Models.Motorista
         [Display(Name = "Motorista")]
         public int MotoristaId { get; set; }
         public Motorista Motorista { get; set; }
-        
 
         [Required(ErrorMessage = "Infome o Valor")]
         [Display(Name = "Valor")]
@@ -44,8 +44,7 @@ namespace FreteFree.Models.Motorista
         [Display(Name = " Data")]
         public DateTime DataOrdemCarregamento { get; set; }
 
-
-
+        public bool Ativo { get; set; }
 
         public virtual ICollection<Empresa> Empresas { get; set; }
         public virtual ICollection<Motorista> Motoristas { get; set; }

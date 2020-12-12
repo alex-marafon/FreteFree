@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label asp-for="TipoCaminhao" class="control-label"></label>
                 <select asp-for="TipoCaminhao" asp-items="@Html.GetEnumSelectList<TipoCaminhao>()" class="form-control"></select>
-                <option selected="selected" value="" ></option>
+                <optiom selected="selected" value="" ></optiom>
                 <span asp-validation-for="TipoCaminhao" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -84,7 +84,7 @@
             <div class="form-group">
                 <label asp-for="UF" class="control-label"></label>
                 <select asp-for="UF" asp-items="@Html.GetEnumSelectList<UF>()" class="form-control"></select>
-                <option selected="selected" value="">Selecione um Estado</option>
+                <optiom selected="selected" value="">Selecione um Estado</optiom>
                 <span asp-validation-for="UF" class="text-danger"></span>
             </div>
             <div class="form-group">

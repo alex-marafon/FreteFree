@@ -4,14 +4,16 @@ using FreteFree.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FreteFree.Migrations
 {
     [DbContext(typeof(FreteFreeContext))]
-    partial class FreteFreeContextModelSnapshot : ModelSnapshot
+    [Migration("20201211193354_Migracao02")]
+    partial class Migracao02
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,9 +27,6 @@ namespace FreteFree.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
 
                     b.Property<decimal>("CNPJ")
                         .HasColumnType("decimal(20)");
@@ -114,9 +113,6 @@ namespace FreteFree.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime>("DataOrdemCarregamento")
                         .HasColumnType("datetime2");
 
@@ -147,9 +143,6 @@ namespace FreteFree.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
 
                     b.Property<string>("CidadeEmpresa")
                         .IsRequired()

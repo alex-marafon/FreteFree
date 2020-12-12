@@ -180,3 +180,6 @@ C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\OrdemCarregam
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\OrdemCarregamento\Edit.cshtml.g.cs
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\OrdemCarregamento\Index.cshtml.g.cs
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Motorista\_NovoEeditar.cshtml.g.cs
+C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\OrdemCarregamento\_CriarEditar.cshtml.g.cs
+C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\OrdemCarregamento\_DetalheDeletar.cshtml.g.cs
+C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Motorista\_DetalheDelete.cshtml.g.cs

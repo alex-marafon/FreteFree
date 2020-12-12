@@ -140,7 +140,9 @@ namespace FreteFree.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var empresa = await _context.Empresa.FindAsync(id);
-            _context.Empresa.Remove(empresa);
+
+          //  _context.Empresa.Remove(empresa);
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

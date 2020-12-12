@@ -9,12 +9,9 @@ namespace FreteFree.Models.Motorista
 {
     public class Motorista
     {
-        public Motorista( )
-        {
-          
-        }
+
         [Key]
-         [Display(Name = "ID")]
+        [Display(Name = "ID")]
         public int MotoristaId { get; set; }
 
         //============ Proprietario Caminhão ===================
@@ -30,32 +27,32 @@ namespace FreteFree.Models.Motorista
         [Display(Name = "Telefone Proprietario Caminhão")]
         public decimal TelefoneProprietario { get; set; }
 
-       
-        
-
         [Required(ErrorMessage = "Preencha o Tipo Caminhão")]
         [Display(Name = "Tipo Caminhão")]
         public TipoCaminhao TipoCaminhao { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
-        [Display(Name = "Cliente")]
+        [Required(ErrorMessage = "Preencha com a Placa Cavalo")]
+        [Display(Name = "Placa Cavalo")]
         public string PlacaCavalo { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
-        [Display(Name = "Cliente")]
+        [Required(ErrorMessage = "Preencha com a Cidade Cavalo")]
+        [Display(Name = "Cidade Cavalo")]
         public string CidadeCavalo { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
-        [Display(Name = "Cliente")]
+        [Required(ErrorMessage = "Preencha com Estado Cavalo")]
+        [Display(Name = "Estado Cavalo")]
         public string EstadoCavalo { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
-        [Display(Name = "Cliente")]
+        [Display(Name = "Placa Carreta")]
         public string PlacaCarreta { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
-        [Display(Name = "Cliente")]
+        [Display(Name = "Cidade Carreta")]
         public string CidadeCarreta { get; set; }
+
+        [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
+        [Display(Name = "Estado Carreta")]
         public string EstadoCarreta { get; set; }
 
         //============ Motorista Caminhão ===================
@@ -95,9 +92,9 @@ namespace FreteFree.Models.Motorista
         [Display(Name = "CNPJ Motorista")]
         public decimal CNPJ { get; set; }
 
-  
-     //   public virtual ICollection<Motorista> motorista { get; set; }
-    
-        
+        public bool Ativo { get; set; }
+        //   public virtual ICollection<Motorista> motorista { get; set; }
+
+
     }
 }
