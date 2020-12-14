@@ -1,18 +1,19 @@
 ﻿
-@*@model IEnumerable<FreteFree.Models.Motorista.OrdemCarregamento>
+@model IEnumerable<FreteFree.Models.Motorista.OrdemCarregamento>
 
 @{
     ViewData["Title"] = "Historico";
 }
 
-<h1>Index</h1>
+<h1>Historico de Carregamento</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
+            <th>
+                
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Empresa)
             </th>
@@ -34,7 +35,11 @@
     <tbody>
         @foreach (var item in Model)
         {
+           
             <tr>
+                @*<td>
+                    <input type="checkbox" value="@Html.DisplayFor(modelItem => item.OrdemCarregamentoId)" />
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.Empresa.CidadeEmpresa)
                 </td>
@@ -51,11 +56,10 @@
                     @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.OrdemCarregamentoId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.OrdemCarregamentoId">Delete</a>
+                    <a asp-action="Recibo" asp-route-id="@item.OrdemCarregamentoId">Recibo</a> |
+                    <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Carregamento</a>
                 </td>
             </tr>
         }
     </tbody>
-</table>*@
+</table>

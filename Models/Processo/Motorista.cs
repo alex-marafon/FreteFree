@@ -40,8 +40,8 @@ namespace FreteFree.Models.Motorista
         public string CidadeCavalo { get; set; }
 
         [Required(ErrorMessage = "Preencha com Estado Cavalo")]
-        [Display(Name = "Estado Cavalo")]
-        public string EstadoCavalo { get; set; }
+        [Display(Name = "UF Cavalo")]
+        public UF EstadoCavalo { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
         [Display(Name = "Placa Carreta")]
@@ -52,8 +52,8 @@ namespace FreteFree.Models.Motorista
         public string CidadeCarreta { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome Cliente")]
-        [Display(Name = "Estado Carreta")]
-        public string EstadoCarreta { get; set; }
+        [Display(Name = "UF Carreta")]
+        public UF EstadoCarreta { get; set; }
 
         //============ Motorista Caminhão ===================
         [Required(ErrorMessage = "Preencha o campo Nome do Motorista")]
@@ -78,7 +78,7 @@ namespace FreteFree.Models.Motorista
 
         [Required(ErrorMessage = "Preencha o campo UF do Motorista")]
         [Display(Name = "UF Motorista")]
-        public UF UF { get; set; }
+        public UF EstadoMotorista { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo CPF do Motorista")]
         [Display(Name = "CPF Motorista")]

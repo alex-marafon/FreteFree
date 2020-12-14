@@ -23,6 +23,8 @@ namespace FreteFree.Controllers
         public async Task<IActionResult> Index()
         {
             var freteFreeContext = _context.OrdemCarregamento.Include(o => o.Empresa).Include(o => o.Motorista);
+
+
             return View(await freteFreeContext.ToListAsync());
         }
 
@@ -49,8 +51,8 @@ namespace FreteFree.Controllers
         // GET: OrdemCarregamento/Create
         public IActionResult Create()
         {
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa");
-            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "CaminhaoProprietario");
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa");
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista");
             return View();
         }
 
@@ -67,8 +69,8 @@ namespace FreteFree.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa", ordemCarregamento.EmpresaId);
-            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "CaminhaoProprietario", ordemCarregamento.MotoristaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista", ordemCarregamento.MotoristaId);
             return View(ordemCarregamento);
         }
 
@@ -85,8 +87,8 @@ namespace FreteFree.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa", ordemCarregamento.EmpresaId);
-            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "CaminhaoProprietario", ordemCarregamento.MotoristaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista", ordemCarregamento.MotoristaId);
             return View(ordemCarregamento);
         }
 
@@ -122,8 +124,8 @@ namespace FreteFree.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa", ordemCarregamento.EmpresaId);
-            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "CaminhaoProprietario", ordemCarregamento.MotoristaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista", ordemCarregamento.MotoristaId);
             return View(ordemCarregamento);
         }
 

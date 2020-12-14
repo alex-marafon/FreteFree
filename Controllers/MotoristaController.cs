@@ -56,7 +56,7 @@ namespace FreteFree.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MotoristaId,CaminhaoProprietario,EnderecoProprietario,TelefoneProprietario,TipoCaminhao,PlacaCavalo,CidadeCavalo,EstadoCavalo,PlacaCarreta,CidadeCarreta,EstadoCarreta,NomeMotorista,EnderecoMotorista,TelefoneMovel,TelefoneFixo,CidadeMotorista,UF,CPFMotorista,RGMotorista,CNPJ")] Motorista motorista)
+        public async Task<IActionResult> Create([Bind("MotoristaId,CaminhaoProprietario,EnderecoProprietario,TelefoneProprietario,TipoCaminhao,PlacaCavalo,CidadeCavalo,EstadoCavalo,PlacaCarreta,CidadeCarreta,EstadoCarreta,NomeMotorista,EnderecoMotorista,TelefoneMovel,TelefoneFixo,CidadeMotorista,EstadoMotorista,CPFMotorista,RGMotorista,CNPJ")] Motorista motorista)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace FreteFree.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MotoristaId,CaminhaoProprietario,EnderecoProprietario,TelefoneProprietario,TipoCaminhao,PlacaCavalo,CidadeCavalo,EstadoCavalo,PlacaCarreta,CidadeCarreta,EstadoCarreta,NomeMotorista,EnderecoMotorista,TelefoneMovel,TelefoneFixo,CidadeMotorista,UF,CPFMotorista,RGMotorista,CNPJ")] Motorista motorista)
+        public async Task<IActionResult> Edit(int id, [Bind("MotoristaId,CaminhaoProprietario,EnderecoProprietario,TelefoneProprietario,TipoCaminhao,PlacaCavalo,CidadeCavalo,EstadoCavalo,PlacaCarreta,CidadeCarreta,EstadoCarreta,NomeMotorista,EnderecoMotorista,TelefoneMovel,TelefoneFixo,CidadeMotorista,EstadoMotorista,CPFMotorista,RGMotorista,CNPJ")] Motorista motorista)
         {
             if (id != motorista.MotoristaId)
             {
