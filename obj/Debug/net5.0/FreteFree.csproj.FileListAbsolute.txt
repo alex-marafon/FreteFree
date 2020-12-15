@@ -183,3 +183,7 @@ C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Motorista\Edi
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Motorista\Index.cshtml.g.cs
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Motorista\_DetalheDelete.cshtml.g.cs
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Motorista\_NovoEeditar.cshtml.g.cs
+C:\Users\Trut4\source\repos\FreteFree\bin\Debug\net5.0\PdfSharpCore.dll
+C:\Users\Trut4\source\repos\FreteFree\bin\Debug\net5.0\SixLabors.Fonts.dll
+C:\Users\Trut4\source\repos\FreteFree\bin\Debug\net5.0\SixLabors.ImageSharp.dll
+C:\Users\Trut4\source\repos\FreteFree\bin\Debug\net5.0\de\PdfSharpCore.resources.dll
