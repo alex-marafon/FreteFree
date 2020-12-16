@@ -10,6 +10,8 @@ using FreteFree.Data;
 using Microsoft.EntityFrameworkCore;
 using PdfSharpCore.Drawing;
 using System.IO;
+using Microsoft.AspNetCore.Http;
+using iTextSharp.text;
 
 namespace FreteFree.Controllers
 {
@@ -35,6 +37,20 @@ namespace FreteFree.Controllers
         {
             var freteFreeContext = _context.OrdemCarregamento.Include(o => o.Empresa).Include(o => o.Motorista);
             return View(await freteFreeContext.ToListAsync());
+        }
+
+
+
+        public IActionResult Pdf()
+        {
+            Document doc = new Document(PageSize.A4);
+            doc.SetMargins(40, 40, 40, 80);
+            //doc
+
+
+
+            return View();
+
         }
 
 
@@ -69,10 +85,6 @@ namespace FreteFree.Controllers
 
 
 
-
-
-
-
                 using (MemoryStream stream = new MemoryStream())
                 {
                     var contantType = "application/pdf";
@@ -82,8 +94,28 @@ namespace FreteFree.Controllers
 
                     return File(stream.ToArray(), contantType, nomeArquivo);
                 }
+
+           
             }
+
+           
         }
+       
+
+
+
+        //public static Byte[] PdfSharpConvert(String html)
+        //{
+        //    Byte[] res = null;
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
+        //        var pdf = TheArtOfDev.HtmlRenderer.PdfSharp.PdfGenerator.GeneratePdf(html, PdfSharp.PageSize.A4);
+        //        pdf.Save(ms);
+        //        res = ms.ToArray();
+        //    }
+        //    return res;
+        //}
+
 
 
         //pesquisa SQL Like   nao funciona com class agrupadas pois o valor de retorno da colsulta é o ID e nao a string pesquisada
