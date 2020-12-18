@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+<body >
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -19,11 +19,11 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>*@
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Empresa</a>
                         </li>
@@ -35,7 +35,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GerarPDF">Gerar pdf</a>
-                        </li>  <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PdfSharpConvert">Converter hmlt to pdf</a>
                         </li>
                     </ul>
@@ -45,19 +46,19 @@
 
 
                     @*<button class="btn btn-primary my-2 my-sm-0" type="submit">
-                    </button>*@
+                        </button>*@
 
                     @*<form class="form-inline" action=" " method="post">
-                        <input  class="form-control mr-sm-2" type="text" />
-                        <button class="btn btn-primary my-2 my-sm-0" type="submit">
-                            Pesquisar
-                        </button>
-                    </form>*@
+                            <input  class="form-control mr-sm-2" type="text" />
+                            <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                                Pesquisar
+                            </button>
+                        </form>*@
                     @*<form action=" " method="post">
-                        <label for="busca">Buscar</label>
-                        <input type="search" id="busca" name="q">
-                        <button type="submit">OK</button>
-                    </form>*@
+                            <label for="busca">Buscar</label>
+                            <input type="search" id="busca" name="q">
+                            <button type="submit">OK</button>
+                        </form>*@
 
 
 
@@ -71,29 +72,29 @@
 
 
         @*<nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Empresa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Motorista" asp-action="Index">Motorista</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="OrdemCarregamento" asp-action="Index">OrdemCarregamento</a>
-                        </li>
-                        <!-- <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider">
-                </div> <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-        </li> -->
-                    </ul>*@
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Motorista" asp-action="Index">Motorista</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="OrdemCarregamento" asp-action="Index">OrdemCarregamento</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider">
+                    </div> <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </li> -->
+                        </ul>*@
 
         @*<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">*@
 
@@ -103,11 +104,12 @@
 
 
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+        <div class="container"  id="imprimir">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -117,13 +119,28 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
- 
-    @*<script src="~/js/sb-admin-2.js"></script>
-    <script src="~/js/sb-admin-2.min.js"></script>
-    <script src="~/js/demo/chart-area-demo.js"></script>
-    <script src="~/js/demo/chart-bar-demo.js"></script>
-    <script src="~/js/demo/chart-pie-demo.js"></script>
-    <script src="~/js/demo/datatables-demo.js"></script>*@
+
+
+
+    @* <input type="button" onclick="Save()" value="Recibo" /> *@
+
+    <script type="text/javascript">
+        function Save() {
+            var conteudo = document.getElementById('imprimir').innerHTML;
+            print = window.open();            
+            print.document.write(conteudo);
+            print.window.print();
+            print.window.close();
+        }
+
+
+        function printPage() {
+            window.print();
+        }
+    </script>
+
+
+
 
     @await RenderSectionAsync("Scripts", required: false)
 

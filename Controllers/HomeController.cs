@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using PdfSharpCore.Drawing;
 using System.IO;
 using Microsoft.AspNetCore.Http;
-using iTextSharp.text;
+
 
 namespace FreteFree.Controllers
 {
@@ -39,98 +39,26 @@ namespace FreteFree.Controllers
             return View(await freteFreeContext.ToListAsync());
         }
 
-
-
-        public IActionResult Pdf()
+        // GET: OrdemCarregamento/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            Document doc = new Document(PageSize.A4);
-            doc.SetMargins(40, 40, 40, 80);
-            //doc
-
-
-
-            return View();
-
-        }
-
-
-        public FileResult GerarPDF()
-        {
-            using (var doc = new PdfSharpCore.Pdf.PdfDocument()) 
+            if (id == null)
             {
-                var page = doc.AddPage();
-                page.Size = PdfSharpCore.PageSize.A4;
-                page.Orientation = PdfSharpCore.PageOrientation.Portrait;
-
-                var graphics = PdfSharpCore.Drawing.XGraphics.FromPdfPage(page);
-                var corFonte = PdfSharpCore.Drawing.XBrushes.Black;
-
-                var textFormatter = new PdfSharpCore.Drawing.Layout.XTextFormatter(graphics);
-                var fonteOrganzacao = new PdfSharpCore.Drawing.XFont("Arial", 10);
-                var fonteDescricao = new PdfSharpCore.Drawing.XFont("Arial", 8, PdfSharpCore.Drawing.XFontStyle.BoldItalic);
-                var titulodetalhes = new PdfSharpCore.Drawing.XFont("Arial", 14, PdfSharpCore.Drawing.XFontStyle.Bold);
-                var fonteDetalhesDescricao = new PdfSharpCore.Drawing.XFont("Arial", 7);
-
-                var logo = @"C:\Users\Trut4\source\repos\FreteFree\wwwroot\imagens\Capturar.JPG";
-
-                var artPaginas = doc.PageCount;
-
-                var qtdPaginas = doc.PageCount;
-                textFormatter.DrawString(qtdPaginas.ToString(), new PdfSharpCore.Drawing.XFont("Arial", 10), corFonte, new PdfSharpCore.Drawing.XRect(578, 825, page.Width, page.Height));
-
-                XImage imagem = XImage.FromFile(logo);
-                graphics.DrawImage(imagem, 20, 5, 300, 50);
-
-
-
-
-
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    var contantType = "application/pdf";
-                    doc.Save(stream, false);
-
-                    var nomeArquivo = "RelatorioValdir.pdf";
-
-                    return File(stream.ToArray(), contantType, nomeArquivo);
-                }
-
-           
+                return NotFound();
             }
 
-           
+            var ordemCarregamento = await _context.OrdemCarregamento
+                .Include(o => o.Empresa)
+                .Include(o => o.Motorista)
+                .FirstOrDefaultAsync(m => m.OrdemCarregamentoId == id);
+            if (ordemCarregamento == null)
+            {
+                return NotFound();
+            }
+
+            return View(ordemCarregamento);
         }
-       
 
-
-
-        //public static Byte[] PdfSharpConvert(String html)
-        //{
-        //    Byte[] res = null;
-        //    using (MemoryStream ms = new MemoryStream())
-        //    {
-        //        var pdf = TheArtOfDev.HtmlRenderer.PdfSharp.PdfGenerator.GeneratePdf(html, PdfSharp.PageSize.A4);
-        //        pdf.Save(ms);
-        //        res = ms.ToArray();
-        //    }
-        //    return res;
-        //}
-
-
-
-        //pesquisa SQL Like   nao funciona com class agrupadas pois o valor de retorno da colsulta é o ID e nao a string pesquisada
-        //public async Task<IActionResult> Index(string searchString)
-        //{
-        //    var pesquisa = _context.OrdemCarregamento;
-
-
-        //    if (!String.IsNullOrEmpty(searchString))
-        //    {
-        //        pesquisa = pesquisa.Where(s => s.Empresa.NomeEmpresa(searchString));
-        //    }
-
-        //    return View(await pesquisa.ToListAsync());
-        //}
 
 
 

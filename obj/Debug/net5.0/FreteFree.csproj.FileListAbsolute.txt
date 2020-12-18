@@ -187,3 +187,4 @@ C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\FreteFree.dll
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\ref\FreteFree.dll
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\FreteFree.pdb
 C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\FreteFree.genruntimeconfig.cache
+C:\Users\Trut4\source\repos\FreteFree\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs

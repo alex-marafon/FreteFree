@@ -10,125 +10,141 @@
         <input style="" class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar" title="Pesquisar por nome />
     </div>*@
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                ID Carga
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Empresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Motorista)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Medida)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataOrdemCarregamento)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OrdemCarregamentoId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Empresa.NomeEmpresa)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Motorista.NomeMotorista)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Valor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Medida)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
-                </td>
-                <td>
-                    <a asp-action="Recibo" asp-route-id="@item.OrdemCarregamentoId">Recibo</a> |
-                    <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Carregamento</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+
+
+
+
+
+        <table class="table"  id='myFrame'>
+            <thead>
+                <tr>
+                    <th>
+                        ID Carga
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Empresa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Motorista)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Valor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Medida)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataOrdemCarregamento)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrdemCarregamentoId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Empresa.NomeEmpresa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Motorista.NomeMotorista)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Medida)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
+                        </td>
+                        <td>
+                            @*<a asp-action="Recibo" asp-route-id="@item.OrdemCarregamentoId">Recibo</a> |*@
+                            <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Detalhado</a> |
+
+                            @*<input type="button" onclick="Save()" value="Recibo" />*@
+
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+
+
 
 
 
 
 @*
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    ID Carga
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Empresa)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Motorista)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Valor)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Medida)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DataOrdemCarregamento)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-
-
-        <tbody>
-            @foreach (var item in Model)
-            {
-
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        <input type="checkbox" value="@Html.DisplayFor(modelItem => item.OrdemCarregamentoId)" />
-@Html.DisplayFor(modelItem => item.OrdemCarregamentoId)
-                </td>
-<td>
-    @Html.DisplayFor(modelItem => item.Empresa.CidadeEmpresa)
-</td>
-<td>
-    @Html.DisplayFor(modelItem => item.Motorista.CaminhaoProprietario)
-</td>
-<td>
-    @Html.DisplayFor(modelItem => item.Valor)
-</td>
-<td>
-    @Html.DisplayFor(modelItem => item.Medida)
-</td>
-<td>
-    @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
-</td>
-<td>
-    <a asp-action="Recibo" asp-route-id="@item.OrdemCarregamentoId">Recibo</a> |
-    <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Carregamento</a>
-</td>
-            </tr>
-        }
-    </tbody>
-</table>
- *@
+                    <th>
+                        ID Carga
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Empresa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Motorista)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Valor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Medida)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataOrdemCarregamento)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" value="@Html.DisplayFor(modelItem => item.OrdemCarregamentoId)" />
+    @Html.DisplayFor(modelItem => item.OrdemCarregamentoId)
+                    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Empresa.CidadeEmpresa)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Motorista.CaminhaoProprietario)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Valor)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Medida)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
+    </td>
+    <td>
+        <a asp-action="Recibo" asp-route-id="@item.OrdemCarregamentoId">Recibo</a> |
+        <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Carregamento</a>
+    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+*@
 
 
 
